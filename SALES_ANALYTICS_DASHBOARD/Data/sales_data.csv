@@ -1,0 +1,9 @@
+Date,Region,Product,Quantity,Unit_Price,Total
+2025-01-01,North,Shirts,15,800,12000
+2025-01-02,South,Pants,10,1200,12000
+2025-01-03,East,T-Shirts,20,500,10000
+2025-01-04,West,Jeans,5,2000,10000
+2025-01-05,North,Shirts,8,850,6800
+2025-01-06,South,Pants,12,1100,13200
+2025-01-07,East,T-Shirts,18,550,9900
+2025-01-08,West,Jeans,9,2100,18900
