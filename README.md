@@ -30,7 +30,9 @@ This project demonstrates a full **end-to-end data automation pipeline**, showca
 ✅ Includes detailed error handling for missing files or invalid data  
 
 ---
+<img width="1784" height="1181" alt="sales_visuals_overview" src="https://github.com/user-attachments/assets/b259355b-72aa-497a-b3fb-cc0eccfc7f06" />
 
+---
 ## 🧰 Tools & Libraries Used
 - **Python 3.11**  
 - **Pandas** → Data Cleaning & Analysis  
