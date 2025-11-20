@@ -1,7 +1,3 @@
-# ====================================================
-# STEP 3 - Smart Auto Update and Clean Sales Dashboard
-# ====================================================
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
