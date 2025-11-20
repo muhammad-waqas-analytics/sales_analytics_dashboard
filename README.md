@@ -87,3 +87,67 @@ Data Analyst | Python Automation | Dashboard Development
 🔗 LinkedIn Profile : https://www.linkedin.com/in/mr-waqas/
 
 ⭐ If you find this project useful, please give it a star on GitHub!
+
+---
+## 🧰 Virtual Environment (recommended)
+
+Create and use a local virtual environment so dependencies don't conflict with your system Python.
+
+Linux / macOS
+
+```bash
+# from project root
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Windows (PowerShell)
+
+```powershell
+# from project root
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+Notes:
+- The `.venv/` directory is ignored by the repository (`.gitignore`) — do not commit it.
+- To update `requirements.txt` from your venv:
+
+```bash
+.venv/bin/python -m pip freeze > requirements.txt
+git add requirements.txt && git commit -m "Update requirements.txt"
+```
+
+---
+## ⚠️ (Optional) Purge `.venv` from Git history
+
+If `.venv` was accidentally committed and you need to remove it from the repository history (this rewrites history and will require all collaborators to re-clone), two common tools are:
+
+1) git-filter-repo (recommended)
+
+```bash
+# install (once)
+python -m pip install git-filter-repo
+
+# from repository root — WARNING: rewrites history
+git clone --mirror <repo-url> repo-mirror.git
+cd repo-mirror.git
+git-filter-repo --invert-paths --paths .venv
+git push --force
+```
+
+2) BFG Repo-Cleaner
+
+```bash
+# download BFG or install via package manager
+# from repository root (create a mirror clone first)
+git clone --mirror <repo-url> repo-mirror.git
+java -jar bfg.jar --delete-folders .venv repo-mirror.git
+cd repo-mirror.git
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git push --force
+```
+
+If you want me to run the history-purge commands for you, I can do that — but please confirm you understand this will rewrite the repository history and everyone with clones will need to re-clone or follow recovery steps.
