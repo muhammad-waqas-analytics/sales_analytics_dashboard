@@ -1,0 +1,4 @@
+reportlab>=3.6
+pandas>=2.0
+matplotlib>=3.6
+seaborn>=0.12
